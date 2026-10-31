@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shasta-dtg.pages.dev/sitemap.xml
+Sitemap: https://edushasta.lol/sitemap.xml
