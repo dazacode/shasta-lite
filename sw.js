@@ -30,7 +30,7 @@ importScripts("./controller/controller.sw.js");
 //   at the next update.
 // - Response headers are kept as the server sent them (COOP/COEP included), so a launch from the cache is
 //   cross-origin isolated exactly when a launch from the server is.
-const SHELL_VERSION = "0e358fa2ded8";
+const SHELL_VERSION = "3564c55150f6";
 // Shasta Lite (scripts/deploy-base44.ts stamps "yes" here): its host cannot send headers, so this worker gives Shasta's
 // own pages the cross-origin isolation the full site's server sends (threaded wasm games need it). Same policy as the
 // server, on every same-origin page it serves: a document with a different policy would cut the shell off from it.
