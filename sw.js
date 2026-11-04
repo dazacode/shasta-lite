@@ -5,7 +5,7 @@ try {
 	}
 } catch {}
 // relative to this file, so a build served from a folder (Lite on jsDelivr) finds the engine next to it
-importScripts("./controller/controller.sw.js");
+importScripts("./rt/sw.js");
 
 // ---- offline application shell ------------------------------------------------------------------------------
 // Shasta's own files are kept in a cache named after the build, so the browser interface starts with no network.
@@ -30,7 +30,7 @@ importScripts("./controller/controller.sw.js");
 //   at the next update.
 // - Response headers are kept as the server sent them (COOP/COEP included), so a launch from the cache is
 //   cross-origin isolated exactly when a launch from the server is.
-const SHELL_VERSION = "1cefa6a51c9f";
+const SHELL_VERSION = "c631a17dc09d";
 // Shasta Lite (scripts/deploy-base44.ts stamps "yes" here): its host cannot send headers, so this worker gives Shasta's
 // own pages the cross-origin isolation the full site's server sends (threaded wasm games need it). Same policy as the
 // server, on every same-origin page it serves: a document with a different policy would cut the shell off from it.
@@ -63,7 +63,7 @@ const MANIFEST_URL = "/offline-manifest.json";
 // which shell cache is active, so the next version knows which one to keep as "previous"
 const META_CACHE = "shasta-offline-meta";
 const META_URL = "/__shasta/offline-meta";
-const SHELL_PATHS = /^\/(assets|scramjet|controller|ort)\/[^/]+$|^\/[^/]+\.(webmanifest|svg|png|ico)$/;
+const SHELL_PATHS = /^\/(assets|scramjet|controller|rt|ort)\/[^/]+$|^\/[^/]+\.(webmanifest|svg|png|ico)$/;
 
 addEventListener("fetch", (e) => {
 	if ($scramjetController.shouldRoute(e)) {
