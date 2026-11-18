@@ -30,8 +30,8 @@ importScripts("./rt/sw.js");
 //   at the next update.
 // - Response headers are kept as the server sent them (COOP/COEP included), so a launch from the cache is
 //   cross-origin isolated exactly when a launch from the server is.
-const SHELL_VERSION = "82195557c4f8";
-// Shasta Lite (scripts/deploy-base44.ts stamps "yes" here): its host cannot send headers, so this worker gives Shasta's
+const SHELL_VERSION = "b2c49fd45340";
+// Shasta Lite on a host that cannot send headers (a deploy script stamps "yes" here; Base44 did until 2026-11-17): so this worker gives Shasta's
 // own pages the cross-origin isolation the full site's server sends (threaded wasm games need it). Same policy as the
 // server, on every same-origin page it serves: a document with a different policy would cut the shell off from it.
 // Lite has no offline shell (the host rewrites index.html, so its checksums never match).
